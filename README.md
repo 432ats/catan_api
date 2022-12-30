@@ -1,4 +1,4 @@
-# catan
+# catan_api
 
 ## memo
 - `gqlgen.yml` : gqlgen の設定ファイル
@@ -7,3 +7,13 @@
 - `graph/resolver.go` : GraphQLサーバーが読み込むリゾルバー（ゴリゴリ書くぞ🐯）
 - `graph/schema.graphqls` : GraphQLのスキーマファイル（ゴリゴリ書くぞ🐯）
 - `graph/schema.resolvers.go` : まだよう分からん🤔
+
+## 実装フロー
+スキーマファイル(`schema.graphqls`)の更新を行ったら、generated.goに反映するために以下を実行
+```
+go run github.com/99designs/gqlgen generate
+```
+もしくは
+```
+go generate ./...
+```

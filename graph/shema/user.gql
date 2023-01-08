@@ -1,0 +1,14 @@
+type User {
+  id: ID!
+  """
+  ユーザー名。匿名ユーザーの場合はnull
+  """
+  name: String
+}
+
+type Query {
+  """
+  指定したIDのユーザーを撮ってくる
+  """
+  user(id: ID!): User
+}

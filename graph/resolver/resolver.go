@@ -1,6 +1,4 @@
-package graph
-
-//go:generate go run github.com/99designs/gqlgen generate
+package resolver
 
 import "example.com/catan/graph/model"
 
@@ -9,5 +7,5 @@ import "example.com/catan/graph/model"
 // It serves as dependency injection for your app, add any dependencies you require here.
 
 type Resolver struct {
-	todos []*model.Todo
+	user *model.User
 }

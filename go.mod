@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/99designs/gqlgen v0.17.22
-	github.com/rs/cors v1.8.3
+	github.com/google/uuid v1.3.0
 	github.com/vektah/gqlparser/v2 v2.5.1
 )
 

@@ -5,7 +5,8 @@ import (
 	"net/http"
 	"os"
 
-	"example.com/catan/graph"
+	"example.com/catan/graph/generated"
+	"example.com/catan/graph/resolver"
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
 )
@@ -18,7 +19,7 @@ func main() {
 		port = defaultPort
 	}
 
-	srv := handler.NewDefaultServer(graph.NewExecutableSchema(graph.Config{Resolvers: &graph.Resolver{}}))
+	srv := handler.NewDefaultServer(generated.NewExecutableSchema(generated.Config{Resolvers: &resolver.Resolver{}}))
 
 	// TODO: cors対応させる
 	// handler := cors.Default().Handler(srv) // ★CORS レスポンス対応
